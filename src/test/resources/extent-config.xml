@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+  <configuration>
+    <!-- report theme --> <!-- standard, dark -->
+    <theme>standard</theme>
+  
+    <!-- document encoding -->  <!-- defaults to UTF-8 -->
+    <encoding>UTF-8</encoding>
+    
+    <!-- protocol for script and stylesheets -->   <!-- defaults to https -->
+    <protocol>https</protocol>
+    
+    <!-- title of the document -->
+    <documentTitle>Cesta Project</documentTitle>
+    
+    <!-- report name - displayed at top-nav -->
+    <reportName>
+    <![CDATA[<img src='logo.png'/>
+    ]]>
+    </reportName>
+    <reportHeadline>
+    
+    </reportHeadline>
+    
+    <!-- global date format override -->  <!-- defaults to yyyy-MM-dd -->
+    <dateFormat>dd-MMM-yyyy</dateFormat>
+    
+    <!-- global time format override -->   <!-- defaults to HH:mm:ss -->
+    <timeFormat>hh:mm:ss a</timeFormat>
+    
+    <!-- custom javascript -->
+    <scripts>
+      <![CDATA[
+        $(document).ready(function() {
+        
+        });
+      ]]>
+    </scripts>
+    
+    <!-- custom styles -->
+    <styles>
+      <![CDATA[
+      .menu{width: 100px;height: 10px; font-size:9px;}
+      .menu li{list-style: none;float:left;margin-right: 2px;padding: 5px;}
+		.menu li:hover, .menu li.active{
+		background-color: #f90;
+		
+		}
+		.report-name{padding-left:2px;} .report-name>img{float:left; height:10%;margin-left:10px;margin-top:10px;width:10px;}        
+      ]]>
+    </styles>
+  </configuration>
+</extentreports>
