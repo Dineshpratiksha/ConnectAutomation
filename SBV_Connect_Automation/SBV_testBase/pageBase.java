@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import SBV_utility.ExceptionHandling;
 import SBV_utility.Logs;
 import SBV_utility.Utils;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class pageBase {
 
@@ -25,8 +26,8 @@ public class pageBase {
 		sBrowserName= Utils.getFileProperty(BrowserType);
 		try {
 			if(sBrowserName.equalsIgnoreCase("Chrome")) {
-				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-//				WebDriverManager.chromedriver().setup();
+//				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+				WebDriverManager.chromedriver().setup();
 				Map<String, Object> chromeprefs = new HashMap<String, Object>();
 				chromeprefs.put("profile.default_content_settings.popups", 0);
 				chromeprefs.put("download.default_directory",  System.getProperty("user.dir")+"\\TestData\\downloadFiles");
